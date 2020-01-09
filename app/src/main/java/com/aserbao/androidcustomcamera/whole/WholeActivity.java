@@ -14,7 +14,7 @@ public class WholeActivity extends RVBaseActivity {
 
     @Override
     public List<ClassBean> initData() {
-        mClassBeans.add(new ClassBean("视频录制这边走", RecorderActivity.class));
+        mClassBeans.add(new ClassBean("Video recording here", RecorderActivity.class));
         return mClassBeans;
     }
 }

@@ -43,7 +43,7 @@
                     android:singleLine="true"
                     android:textSize="14sp"
                     android:textColor="@color/white"
-                    android:text="正在剪辑视频..."/>
+                    android:text="Clipping video..."/>
         </LinearLayout>
 
 </FrameLayout>

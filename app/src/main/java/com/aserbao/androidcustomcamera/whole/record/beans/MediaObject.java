@@ -32,11 +32,11 @@ import static com.aserbao.androidcustomcamera.base.utils.StaticFinalValues.VIDEO
 
 public class MediaObject implements Serializable{
     private static final String TAG = "MediaObject";
-    /** 获取所有分块 */
+    /** Get all chunks */
     private LinkedList<MediaPart> mMediaList = new LinkedList<MediaPart>();
     private LinkedList<String> paths = new LinkedList<>();
     public MediaPart mMediaPart;
-    /**删除分块*/
+    /**Delete chunk*/
     public void removePart(MediaPart part, boolean deleteFile) {
         if (mMediaList != null)
             mMediaList.remove(part);
@@ -96,7 +96,7 @@ public class MediaObject implements Serializable{
                     part.duration = mVideoDuration;
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
-                    Log.e(TAG, "stopRecord: 是不是int型，打个日志自己查看一下" );
+                    Log.e(TAG, "stopRecord: Is it an int type? Check it out for yourself." );
                 }
             }
         }

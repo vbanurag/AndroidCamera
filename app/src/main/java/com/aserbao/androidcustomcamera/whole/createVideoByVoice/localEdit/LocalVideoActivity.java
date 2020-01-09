@@ -89,15 +89,15 @@ public class LocalVideoActivity extends AppCompatActivity implements MediaPlayer
     public float mEndTime;
     public int mRecyclerWidth;
     public int mTotolWidth;
-    public int mThumbSelTime = 30;//选择器选中的时间间隔
+    public int mThumbSelTime = 30;//Time interval selected by the selector
     public String mVideoRotation;
-    private int mInitRotation;//视频初始旋转角度，竖屏为90，横屏为0
+    private int mInitRotation;//Video initial rotation angle, vertical screen is 90, horizontal screen is 0
     private boolean isFailure = false;
     public long mLastTime;
     private long lastTime;
     private boolean isLocalPortrait = false;
     public String mSavevideotemp;
-    private boolean isClickRotate = false;//是否点击了旋转按钮
+    private boolean isClickRotate = false;//Whether the spin button was clicked
     public AsyncTask<Void, Void, Boolean> mAsyncTask;
     private int mRotate = 0;
     private String DIR;
@@ -133,7 +133,7 @@ public class LocalVideoActivity extends AppCompatActivity implements MediaPlayer
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                //获取当前RecyclerView的滑动偏移距离2340
+                //Get the sliding offset distance of the current RecyclerView 2340
                 mTotolWidth = mLocalRecyclerView.computeHorizontalScrollRange();
                 mHorizontalScrollOffset = mLocalRecyclerView.computeHorizontalScrollOffset();
                 float mThumbLeftPosition = mLocalThumbView.getLeftInterval() + mHorizontalScrollOffset;
@@ -169,7 +169,7 @@ public class LocalVideoActivity extends AppCompatActivity implements MediaPlayer
                 if (mThumbSelTime > 30) {
                     mThumbSelTime = 30;
                 }
-                mLocalSelTimeTv.setText("已选取" + mThumbSelTime + "秒");
+                mLocalSelTimeTv.setText("Selected" + mThumbSelTime + "second");
                 mEndTime = mStartTime + mThumbSelTime * 1000;
                 Log.e(TAG, "OnScrollBorder: mStartTime:" + mStartTime + "mEndTime:" + mEndTime);
             }
@@ -226,18 +226,18 @@ public class LocalVideoActivity extends AppCompatActivity implements MediaPlayer
     private void initSetParam() {
         /*if(mVideoRotation.equals("90") && mVideoWidth > mVideoHeight || mVideoRotation.equals("0") && mVideoWidth < mVideoHeight){//本地相机视频竖屏//自定义相机视频
         }*/
-        //todo:自定义相机录制视频的方向不对，长宽是对的，系统相机视频只可以获取正确是角度，不能通过长宽进行判断
-        if (mVideoRotation.equals("0") && mVideoWidth > mVideoHeight) {//本地视频横屏
+        //todo:The direction of the video recorded by the custom camera is wrong. The length and width are correct. The system camera video can only obtain the correct angle.
+        if (mVideoRotation.equals("0") && mVideoWidth > mVideoHeight) {//Local video landscape
             Log.e(TAG, "initSetParam: " );
 //            mInitRotation = 90;
 //            mLocalVideoView.setRotation(mInitRotation);
-        } else if (mVideoRotation.equals("90") && mVideoWidth > mVideoHeight) {//本地视频竖屏
+        } else if (mVideoRotation.equals("90") && mVideoWidth > mVideoHeight) {//Local video vertical screen
             mInitRotation = 90;
             isLocalPortrait = true;
             setPortraitParam();
-        }else if(mVideoRotation.equals("0") && mVideoWidth < mVideoHeight){ //保存视频竖屏
+        }else if(mVideoRotation.equals("0") && mVideoWidth < mVideoHeight){ //Save video portrait
             setPortraitParam();
-        }else if(mVideoRotation.equals("180") && mVideoWidth > mVideoHeight){//本地视频横屏
+        }else if(mVideoRotation.equals("180") && mVideoWidth > mVideoHeight){//Local video landscape
             Log.e(TAG, "initSetParam: " );
         } else{
             mInitRotation = 90;

@@ -300,14 +300,14 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
     }
 
 
-    //添加表情
+    //Add emoji
     private void addStickerView(int resourceId, int gifId) {
         if(mViews.size() >= 40){
-            Toast.makeText(VideoEditActivity.this, "字幕和贴纸的数量不能超过40个", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VideoEditActivity.this, "Subtitles and stickers cannot exceed 40", Toast.LENGTH_SHORT).show();
             return;
         }
         if ((mVideoDuration - currentTime) / 1000 < 2) {
-            Toast.makeText(VideoEditActivity.this, "当前时间不足以添加贴纸", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VideoEditActivity.this, "Not enough time to add stickers", Toast.LENGTH_SHORT).show();
             return;
         }
         hasSelectStickerView = true;
@@ -376,8 +376,8 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
         });
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
         mContentRootView.addView(stickerView, lp);
-        Log.e(TAG, " 初始位置,X=" + stickerView.getPosX() + stickerView.getBitmap().getWidth() / 2);
-        Log.e(TAG, " 初始位置,Y=" + stickerView.getPosY() + stickerView.getBitmap().getHeight() / 2);
+        Log.e(TAG, " initial position,X=" + stickerView.getPosX() + stickerView.getBitmap().getWidth() / 2);
+        Log.e(TAG, " initial position,Y=" + stickerView.getPosY() + stickerView.getBitmap().getHeight() / 2);
         stickerView.setX(stickerView.getPosX() + stickerView.getBitmap().getWidth() / 2);
         stickerView.setY(stickerView.getPosY() + stickerView.getBitmap().getHeight() / 2);
 
@@ -397,11 +397,11 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
     //添加气泡
     private void addBubble(int index) {
         if(mViews.size() >= 40){
-            Toast.makeText(VideoEditActivity.this, "字幕和贴纸的数量不能超过40个", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VideoEditActivity.this, "Subtitles and stickers cannot exceed 40", Toast.LENGTH_SHORT).show();
             return;
         }
         if ((mVideoDuration - currentTime) / 1000 < 2) {
-            Toast.makeText(VideoEditActivity.this, "当前时间不足以添加贴纸", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VideoEditActivity.this, "Not enough time to add stickers", Toast.LENGTH_SHORT).show();
             return;
         }
         hasSelectStickerView = false;
@@ -444,7 +444,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
 
                 videoEditView.recoverView(mViews, bubbleTextView, true);
 
-                if (isPlayVideo) {   //如果已经处于播放状态，则暂停播放
+                if (isPlayVideo) {   //Pause playback if already playing
                     videoEditView.videoPlay(mViews);
                 }
             }
@@ -492,7 +492,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
     }
 
     /**
-     * 设置当前处于编辑模式的贴纸
+     * Set the sticker currently in edit mode
      */
     private void setCurrentEdit(StickerView stickerView) {
         if (mCurrentView != null) {
@@ -506,7 +506,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
     }
 
     /**
-     * 设置当前处于编辑模式的气泡
+     * Set the bubble currently in edit mode
      */
     private void setCurrentEdit(BubbleTextView bubbleTextView) {
         if (mCurrentView != null) {
@@ -518,7 +518,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
         mCurrentEditTextView = bubbleTextView;
         mCurrentEditTextView.setInEdit(true);
     }
-    //字幕选择接口回调
+    //Subtitle selection interface callback
     @Override
     public void bubbleSelect(int bubbleIndex) {
         addBubble(bubbleIndex);
@@ -529,7 +529,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
         addStickerView(resourceId, gifId);
     }
 
-    //视频播放接口
+    //Video playback interface
     private boolean isDestroy;
     private boolean isPlaying = false;
     static final int VIDEO_PREPARE = 0;
@@ -669,7 +669,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
     }
 
     /**
-     * 初始化缩略图
+     * Initialize thumbnail
      */
     private void initThumbs() {
         final MediaMetadataRetriever mediaMetadata = new MediaMetadataRetriever();
@@ -749,7 +749,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
 
     @Override
     public void playChange(boolean isPlayVideo) {
-        Log.e(TAG, "播放状态变化");
+        Log.e(TAG, "Playback status changes");
         this.isPlayVideo = isPlayVideo;
         if (isPlayVideo) {
             if (mCurrentView != null) {
@@ -759,7 +759,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
                 mCurrentEditTextView.setInEdit(false);
             }
         } else {
-            for (StickInfoImageView stickInfoImageView : stickerViews) {  //清空动态贴纸
+            for (StickInfoImageView stickInfoImageView : stickerViews) {  //Clear dynamic stickers
                 mContentRootView.removeView(stickInfoImageView);
             }
             stickerViews.clear();
@@ -772,7 +772,7 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
                 mVideoView.pause();
             }
         } catch (Exception e) {
-            Log.e(TAG, "异常:" + e);
+            Log.e(TAG, "abnormal:" + e);
         }
     }
 
@@ -785,12 +785,12 @@ public class VideoEditActivity extends FragmentActivity implements PopBubbleView
                 mVideoView.seekTo((int) currentTime);
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.e(TAG, "异常:" + e);
+                Log.e(TAG, "abnormal:" + e);
             }
         }else {
-            Log.e(TAG, "播放中currentTime:" + currentTime);
+            Log.e(TAG, "Playing currentTime:" + currentTime);
         }
-        for (int i = 0; i < mViews.size(); i++) {              ////遍历显示静态图
+        for (int i = 0; i < mViews.size(); i++) {              ////Traversing a static graph
             BaseImageView baseImageView = mViews.get(i);
             long startTime = baseImageView.getStartTime();
             long endTime = baseImageView.getEndTime();

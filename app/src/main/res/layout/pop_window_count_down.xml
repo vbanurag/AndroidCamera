@@ -13,7 +13,7 @@
         android:textStyle="bold"
         android:textColor="@color/colorWhite70"
         android:layout_marginTop="16dp"
-        android:text="滑动选择任意位置暂停"
+        android:text="Swipe to select anywhere to pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <FrameLayout
@@ -51,7 +51,7 @@
         android:background="@drawable/yellow_5r_btn_bg"
         android:layout_marginTop="19dp"
         android:layout_marginBottom="20dp"
-        android:text="倒计时拍摄"
+        android:text="Countdown shooting"
         android:textColor="@color/color_454545"
         android:textSize="15sp"
         android:layout_marginLeft="10dp"

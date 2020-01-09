@@ -94,7 +94,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="38dp"
                 android:background="@null"
-                android:hint="请输入昵称"
+                android:hint="Please enter a nickname"
                 android:textColor="@color/colorWhite90"
                 android:textColorHint="@color/colorWhite90"
                 android:textSize="15sp" />
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="6dp"
-                    android:text="广东"
+                    android:text="Guangdong"
                     android:textColor="@color/colorWhite90"
                     android:textSize="15sp" />
 
@@ -131,7 +131,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="22dp"
                     android:layout_toRightOf="@+id/tv_province"
-                    android:text="深圳"
+                    android:text="Shenzhen"
                     android:textColor="@color/colorWhite90"
                     android:textSize="15sp" />
 
@@ -179,7 +179,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:gravity="center"
-                    android:text="性别选定后不可更改"
+                    android:text="Cannot be changed after gender selection"
                     android:textColor="@color/FAE000"
                     android:textSize="15sp" />
 

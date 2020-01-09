@@ -10,12 +10,12 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/muxer_aac_video_to_mp4"
-            android:text="将aac音频和视频画面合成mp4文件"
+            android:text="Combine aac audio and video pictures into mp4 files"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/muxer_aac_db_to_mp4"
-            android:text="根据音频振幅合成mp4文件"
+            android:text="Synthesize mp4 files based on audio amplitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </com.aserbao.androidcustomcamera.base.utils.FlowLayout>

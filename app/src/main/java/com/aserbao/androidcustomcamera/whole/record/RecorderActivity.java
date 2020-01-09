@@ -53,7 +53,7 @@ import static com.aserbao.androidcustomcamera.whole.pickvideo.BaseActivity.IS_NE
 import static com.aserbao.androidcustomcamera.whole.pickvideo.VideoPickActivity.IS_NEED_CAMERA;
 
 public class RecorderActivity extends BaseActivity implements View.OnTouchListener, SlideGpuFilterGroup.OnFilterChangeListener {
-    private static final int VIDEO_MAX_TIME = 30 * 1000;
+    private static final int VIDEO_MAX_TIME = 900 * 1000;
     @BindView(R.id.record_camera_view)
     CameraView mRecordCameraView;
     @BindView(R.id.video_record_progress_view)
@@ -224,7 +224,7 @@ public class RecorderActivity extends BaseActivity implements View.OnTouchListen
                 break;
             case R.id.video_filter:
                 if (mRecordCameraView.getCameraId() == 0){
-                    Toast.makeText(this, "后置摄像头 不使用美白磨皮功能", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Rear camera without whitening and microdermabrasion", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 hideOtherView();
@@ -254,7 +254,7 @@ public class RecorderActivity extends BaseActivity implements View.OnTouchListen
             isRecording = false;
             mRecordCameraView.stopRecord();
             mVideoRecordProgressView.stop();
-            //todo:录制释放有延时，稍后处理
+            //todo:Delay in recording release, handle later
             mMyHandler.sendEmptyMessageDelayed(DELAY_DETAL,250);
             mCustomRecordImageView.stopRecord();
             alterStatus();
@@ -292,7 +292,7 @@ public class RecorderActivity extends BaseActivity implements View.OnTouchListen
         mMatchingBack.setVisibility(View.INVISIBLE);
         mCustomRecordImageView.setVisibility(View.INVISIBLE);
     }
-    //正在录制中
+    //Recording
     public void alterStatus(){
         if(isRecording){
             mIndexAlbum.setVisibility(View.INVISIBLE);
@@ -364,9 +364,9 @@ public class RecorderActivity extends BaseActivity implements View.OnTouchListen
             @Override
             public void run() {
                 if (type == MagicFilterType.NONE){
-                    Toast.makeText(RecorderActivity.this,"当前没有设置滤镜--"+type,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RecorderActivity.this,"No filters currently set--"+type,Toast.LENGTH_SHORT).show();
                 }else {
-                    Toast.makeText(RecorderActivity.this,"当前滤镜切换为--"+type,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RecorderActivity.this,"The current filter is switched to--"+type,Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -440,7 +440,7 @@ public class RecorderActivity extends BaseActivity implements View.OnTouchListen
                     }
 
 
-                    //这一段用来判断视频时间的
+                    //This section is used to judge the video time
                     try {
                         MediaPlayer player = new MediaPlayer();
                         player.setDataSource(videoFileName);
@@ -451,12 +451,12 @@ public class RecorderActivity extends BaseActivity implements View.OnTouchListen
                         int hour = s / 3600;
                         int minute = s % 3600 / 60;
                         int second = s % 60;
-                        Log.e(TAG, "视频文件长度,分钟: " + minute + "视频有" + s + "秒");
-                        if (s >= 120) {
-                            Toast.makeText(this, "视频剪辑不能超过2分钟", Toast.LENGTH_LONG).show();
+                        Log.e(TAG, "Video file length, minutes: " + minute + "Video has" + s + "second");
+                        if (s >= 12000) {
+                            Toast.makeText(this, "Video clip cannot exceed 2 minutes", Toast.LENGTH_LONG).show();
                             return;
                         } else if (s < 5) {
-                            Toast.makeText(this, "视频剪辑不能少于5秒", Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "Video clip must be at least 5 seconds", Toast.LENGTH_LONG).show();
                             return;
                         }else{
                             Intent intent = new Intent(RecorderActivity.this, LocalVideoActivity.class);

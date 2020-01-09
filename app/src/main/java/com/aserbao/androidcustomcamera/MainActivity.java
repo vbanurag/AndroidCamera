@@ -10,8 +10,8 @@ import java.util.List;
 public class MainActivity extends RVBaseActivity {
     @Override
     public List<ClassBean> initData() {
-        mClassBeans.add(new ClassBean("每个功能点单独代码实现", BlocksActivity.class));
-        mClassBeans.add(new ClassBean("所有功能点整合代码实现", WholeActivity.class));
+        mClassBeans.add(new ClassBean("Separate code implementation for each function point", BlocksActivity.class));
+        mClassBeans.add(new ClassBean("All function points integrated code implementation", WholeActivity.class));
         return mClassBeans;
     }
 }

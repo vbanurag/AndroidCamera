@@ -10,17 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:text="开始1"
+            android:text="Start 1"
             android:id="@+id/start1_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="合成视频1的音频和视频2的图像"
+            android:text="Synthesize audio from video 1 and image from video 2"
             android:id="@+id/start2_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="开始3"
+            android:text="Start 3"
             android:id="@+id/start3_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

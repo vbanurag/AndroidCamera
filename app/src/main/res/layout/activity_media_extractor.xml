@@ -10,44 +10,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="解码"
+            android:text="decoding"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
-            android:text="音频解析每一帧数据"
+            android:text="Audio parsing every frame of data"
             android:id="@+id/audio_extractor_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="分离Mp4中的音频生成Mp3"
+            android:text="Separating audio in Mp4 to generate Mp3"
             android:id="@+id/extractor_mp3_from_mp4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="分离Mp4中的视频生成无声音的Mp4"
+            android:text="Separating video in Mp4 to generate Mp4 without sound"
             android:id="@+id/extractor_no_voice_mp4_from_mp4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="分离视频中的音视频"
+            android:text="Separate audio and video from video"
             android:id="@+id/extractor_video_and_audio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="合成视频1的音频和视频2的图像"
+            android:text="Synthesize audio from video 1 and image from video 2"
             android:id="@+id/exchange_video_and_audio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="解码AAC格式音频并播放"
+            android:text="Decode and play AAC format audio"
             android:id="@+id/decoder_aac_and_player"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="解码Mp3格式音频并播放"
+            android:text="Decode Mp3 format audio and play"
             android:id="@+id/decoder_mp3_and_player"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -59,20 +59,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="编码"
+            android:text="coding"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
-            android:text="录音编码成aac格式的音频文件"
+            android:text="Record encoding audio files in aac format"
             android:id="@+id/record_and_encoder_mp3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/record_mp3_stop"
-            android:text="结束录制"
+            android:text="End recording"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </com.aserbao.androidcustomcamera.base.utils.FlowLayout>
@@ -82,14 +82,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="转码"
+            android:text="Transcoding"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
-            android:text="mp3格式转成aac格式音频"
+            android:text="mp3 format to aac format audio"
             android:id="@+id/mp3_translate_aac_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

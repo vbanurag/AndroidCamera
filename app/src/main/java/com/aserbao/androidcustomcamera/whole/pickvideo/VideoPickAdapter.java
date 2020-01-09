@@ -127,7 +127,7 @@ public class VideoPickAdapter extends BaseAdapter<VideoFile, VideoPickAdapter.Vi
                 @Override
                 public void onClick(View v) {
                     if (!v.isSelected() && isUpToMax()) {
-                        Toast.makeText(mContext, "已达到选择上限", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, "Selection limit reached", Toast.LENGTH_SHORT).show();
                         return;
                     }
 

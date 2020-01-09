@@ -28,7 +28,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/tv_red_bg"
-        android:text="下一步"
+        android:text="Next"
         android:textColor="@color/white"
         android:layout_width="65dp"
         android:layout_height="30dp"/>
@@ -84,7 +84,7 @@
                 android:drawablePadding="6dp"
                 android:drawableTop="@drawable/index_album"
                 android:gravity="center"
-                android:text="本地上传"
+                android:text="Local Upload"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 />
@@ -102,7 +102,7 @@
             android:layout_marginRight="53dp"
             android:id="@+id/count_down_tv"
             android:layout_marginLeft="54dp"
-            android:text="倒计时"
+            android:text="Countdown"
             android:textSize="12sp"
             android:textColor="@color/white"
             android:drawableTop="@drawable/bigicon_countdown"

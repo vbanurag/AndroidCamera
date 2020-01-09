@@ -28,7 +28,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/origin"
-                android:text="原图"
+                android:text="Original image"
                 android:alpha="1"
                 android:textSize="12sp"
                 android:layout_marginLeft="17dp"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/delta"
-                android:text="自然"
+                android:text="natural"
                 android:alpha="0.5"
                 android:textSize="12sp"
                 android:layout_marginLeft="15dp"
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/electric"
-                android:text="淡雅"
+                android:text="Elegant"
                 android:alpha="0.5"
                 android:textSize="12sp"
                 android:layout_marginLeft="15dp"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/slowlived"
-                android:text="粉嫩"
+                android:text="Pink"
                 android:alpha="0.5"
                 android:textSize="12sp"
                 android:layout_marginLeft="15dp"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/tokyo"
-                android:text="清新"
+                android:text="Fresh"
                 android:alpha="0.5"
                 android:textSize="12sp"
                 android:layout_marginLeft="15dp"
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/warm"
-                android:text="红润"
+                android:text="rosy"
                 android:alpha="0.5"
                 android:textSize="12sp"
                 android:layout_marginLeft="15dp"
@@ -179,7 +179,7 @@
         android:layout_height="21dp">
         <TextView
             android:id="@+id/mking_tv"
-            android:text="美型"
+            android:text="American"
             android:textColor="#FFEB58"
             android:textSize="15sp"
             android:layout_weight="1"
@@ -189,7 +189,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/filter_tv"
-            android:text="滤镜"
+            android:text="Filter"
             android:textColor="@color/colorWhite50"
             android:textSize="15sp"
             android:layout_weight="1"
@@ -199,7 +199,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/beauty_tv"
-            android:text="美颜"
+            android:text="Beauty"
             android:textColor="@color/colorWhite50"
             android:textSize="15sp"
             android:textStyle="bold"

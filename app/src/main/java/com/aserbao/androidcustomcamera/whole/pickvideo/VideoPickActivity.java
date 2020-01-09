@@ -126,7 +126,7 @@ public class VideoPickActivity extends BaseActivity {
                 }
             });
             tv_folder = (TextView) findViewById(R.id.tv_folder);
-            tv_folder.setText("全部");
+            tv_folder.setText("All");
 
             mFolderHelper.setFolderListListener(new FolderListAdapter.FolderListListener() {
                 @Override
@@ -177,7 +177,7 @@ public class VideoPickActivity extends BaseActivity {
                 if (isNeedFolderList) {
                     ArrayList<Directory> list = new ArrayList<>();
                     Directory all = new Directory();
-                    all.setName("全部");
+                    all.setName("All");
                     list.add(all);
                     list.addAll(directories);
                     mFolderHelper.fillData(list);

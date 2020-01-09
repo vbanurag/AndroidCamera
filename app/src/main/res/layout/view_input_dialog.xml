@@ -26,7 +26,7 @@
         android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:textSize="15sp"
-        android:text="完成"
+        android:text="carry out"
         android:gravity="center"
         android:layout_alignParentRight="true"
         />
@@ -38,7 +38,7 @@
         android:layout_height="130dp"
         android:background="@null"
         android:textSize="15sp"
-        android:hint="说点什么呗……"
+        android:hint="Say something……"
         android:textColor="@color/white"
         android:inputType="text|textMultiLine"
         android:imeOptions="actionDone"

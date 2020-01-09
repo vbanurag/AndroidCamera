@@ -14,17 +14,17 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/sel_btn"
-            android:text="选择视频"
+            android:text="Select video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/decode_show_btn"
-            android:text="视频解码显示"
+            android:text="Video decoding display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/detail_video_btn"
-            android:text="视频合成处理"
+            android:text="Video synthesis processing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </com.aserbao.androidcustomcamera.base.utils.FlowLayout>

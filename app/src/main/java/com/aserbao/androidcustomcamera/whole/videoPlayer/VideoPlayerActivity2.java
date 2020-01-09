@@ -66,7 +66,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);//状态栏半透明
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);//Status bar translucent
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -111,30 +111,30 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         super.onDestroy();
     }
 
-    // 当屏幕发生切换时调用
+    // Called when the screen changes
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {// 横屏
-            setSystemUiHide();// 隐藏最上面那一栏
+            setSystemUiHide();// Hide the top column
             setVideoViewScale(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);// 设置为全屏
 
 
-            // 强制移除半屏状态
+            // Force removal of half screen state
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {// 竖屏
-            setSystemUiShow();// 显示最上面那一栏
+            setSystemUiShow();// Show top column
             setVideoViewScale(ViewGroup.LayoutParams.MATCH_PARENT, DisplayUtil.dipToPx(this, 240));
 
 
-            // 强制移除全屏状态
+            // Force removal of full screen state
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
         }
     }
 
-    // 设置VideoView的大小
+    // Set the size of the VideoView
     private void setVideoViewScale(int width, int height) {
         rlVideo = (RelativeLayout) findViewById(R.id.video_layout);
         ViewGroup.LayoutParams params = rlVideo.getLayoutParams();
@@ -143,7 +143,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         rlVideo.setLayoutParams(params);
     }
 
-    // 隐藏SystemUi
+    // Hide SystemUi
     private void setSystemUiHide() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             View decorView = getWindow().getDecorView();
@@ -156,7 +156,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         }
     }
 
-    // 显示SystemUi
+    // Show SystemUi
     private void setSystemUiShow() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             View decorView = getWindow().getDecorView();
@@ -203,7 +203,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         }
     }
 
-    // 返回事件
+    // Return event
     @Override
     public void onBackPressed() {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -241,7 +241,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         String filename = task.getFilename();*/
         ContentValues localContentValues = getVideoContentValues(this, new File(path), System.currentTimeMillis());
         Uri localUri = localContentResolver.insert(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, localContentValues);
-        Toast.makeText(mContext, "保存到相册成功，路径为"+ path, Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, "Save to album successfully, path is"+ path, Toast.LENGTH_SHORT).show();
     }
 
 

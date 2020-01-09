@@ -14,8 +14,8 @@ import com.aserbao.androidcustomcamera.base.utils.DisplayUtil;
 import com.aserbao.androidcustomcamera.whole.jiaozivideo.cusomview.MyJZVideoPlayerStandard;
 
 /**
- * 这里可以监听到视频播放的生命周期和播放状态
- * 所有关于视频的逻辑都应该写在这里
+ * Here you can monitor the life cycle and playback status of the video playback
+ * All logic about video should be written here
  * Created by Nathen on 2017/7/2.
  */
 public class PublicVideoJZVideo extends JZVideoPlayerStandard {
@@ -151,7 +151,7 @@ public class PublicVideoJZVideo extends JZVideoPlayerStandard {
         super.startWindowTiny();
     }
 
-    // TODO: 2017/10/27 手动点暂停
+    // TODO: 2017/10/27 Manual point pause
     @Override
     public void handlerOnPause() {
         if (mHandlerClickVideoPauseListener != null) {

@@ -10,11 +10,11 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/create_video_analyze_btn"
-            android:text="解析音频"
+            android:text="Parsing audio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
-            android:text="播放"
+            android:text="Play"
             android:id="@+id/play_video_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

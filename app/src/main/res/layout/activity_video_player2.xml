@@ -51,7 +51,7 @@
                 android:id="@+id/video_player_tv_public"
                 android:textSize="15sp"
                 android:gravity="center"
-                android:text="保存到相册"
+                android:text="save into the album"
                 android:textColor="@color/white"
                 android:background="@drawable/color_fc4253_radius_5_bg"
                 android:layout_width="match_parent"

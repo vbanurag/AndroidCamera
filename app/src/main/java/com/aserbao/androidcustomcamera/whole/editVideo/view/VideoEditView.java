@@ -42,12 +42,12 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
     private int viewWidth;
     private int viewHeight;
     private int screenWidth;
-    private boolean isVideoPlaying = false;//视频是否处于播放状态
+    private boolean isVideoPlaying = false;//Whether the video is playing
     private ImageView bigiconPlay;
     private RelativeLayout rlCurrentLayout;
     private TextView tvTotalTime;
     private TextView tvCurrentTime;
-    //存储贴纸列表
+    //Store sticker list
     private ArrayList<View> mViews = new ArrayList<>();
 
     public VideoEditView(Context context, AttributeSet attrs) {
@@ -56,7 +56,7 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
         initView(context, attrs);
     }
 
-    //初始化控件
+    //Initialize the control
     private void initView(Context context, AttributeSet attrs) {
         Resources resources = context.getResources();  //获取屏幕的宽度
         DisplayMetrics dm = resources.getDisplayMetrics();
@@ -95,7 +95,7 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
 
 
     /**
-     * 当布局文件加载完成的时候回调这个方法
+     * Callback this method when the layout file is loaded
      */
     @Override
     protected void onFinishInflate() {
@@ -103,7 +103,7 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
     }
 
     /**
-     * 在测量方法里，得到各个控件的高和宽
+     * In the measurement method, get the height and width of each control
      *
      * @param widthMeasureSpec
      * @param heightMeasureSpec
@@ -119,7 +119,7 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-        //指定菜单的位置
+        //Specify the location of the menu
         videoEditProgressView.layout(screenWidth / 2, 0, screenWidth / 2 + viewWidth, viewHeight);
     }
 
@@ -191,7 +191,7 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
         this.onSelectTimeChangeListener = onSelectTimeChangeListener;
     }
 
-    //开始时间和结束时间回调
+    //Start time and end time callback
     @Override
     public void selectTimeChange(long startTime, long endTime) {
         if (onSelectTimeChangeListener != null) {
@@ -209,7 +209,7 @@ public class VideoEditView extends RelativeLayout implements VideoEditProgressVi
     @Override
     public void videoProgressUpdate(long currentTime, boolean isVideoPlaying) {
         if (tvCurrentTime != null) {
-            Log.e(TAG, "进度更新" );
+            Log.e(TAG, "Progress update" );
             tvCurrentTime.setText(currentTime/1000+"s");
         }
         if (onSelectTimeChangeListener != null) {

@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="22dp"
         android:layout_marginBottom="22dp"
-        android:text="请输入正确的手机号!"
+        android:text="please enter a valid phone number!"
         android:textColor="@color/colorWhite100"
         android:textSize="15sp"
         />

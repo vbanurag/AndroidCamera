@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
-        android:text="总时间"
+        android:text="total time"
         android:textColor="@color/white"
         android:textSize="12sp" />
 
