@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="标题"
+            android:text="Title"
             android:textColor="@color/colorWhite90"
             android:textSize="18sp"
             android:textStyle="bold" />
